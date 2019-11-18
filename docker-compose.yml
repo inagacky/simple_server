@@ -6,8 +6,9 @@ services:
     container_name: test_server 
     tty: true
     ports:
-      - 3000:3000
+      - 30000:3000
     environment:
       TZ: "Asia/Tokyo"
+    volumes:
       - ./test-server/app:/app
     restart: unless-stopped
