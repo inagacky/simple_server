@@ -1,14 +1,13 @@
 version: '3'
 services:
-  test-server:
+  stub-server:
     build:
-      context: test-server
-    container_name: test_server 
+      context: stub-server
     tty: true
     ports:
       - 30000:3000
     environment:
       TZ: "Asia/Tokyo"
     volumes:
-      - ./test-server/app:/app
+      - ./stub-server/app:/app
     restart: unless-stopped
