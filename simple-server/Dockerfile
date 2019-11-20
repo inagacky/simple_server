@@ -2,9 +2,9 @@ FROM node:13.1.0-alpine
 
 ARG WORKSPACE=/app
 
-WORKDIR /app
-
 COPY app $WORKSPACE
+
+WORKDIR $WORKSPACE
 RUN npm install
 
 EXPOSE 3000
