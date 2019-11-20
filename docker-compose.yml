@@ -1,13 +1,14 @@
 version: '3'
 services:
-  stub-server:
+  simple-server:
     build:
-      context: stub-server
+      context: simple-server
     tty: true
     ports:
       - 30000:3000
     environment:
       TZ: "Asia/Tokyo"
     volumes:
-      - ./stub-server/app:/app
+      - ./simple-server/app:/app
+      - ./simple-server/log:/var/log
     restart: unless-stopped

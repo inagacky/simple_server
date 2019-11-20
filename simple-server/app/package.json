@@ -1,13 +1,14 @@
 {
-  "name": "stub-server",
+  "name": "simple-server",
   "version": "1.0.0",
-  "description": "stub-server",
+  "description": "simple-server",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "winston": "^3.2.1"
   }
 }
