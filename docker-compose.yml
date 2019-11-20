@@ -11,4 +11,6 @@ services:
     volumes:
       - ./simple-server/app:/app
       - ./simple-server/log:/var/log
+      - /app/node_modules
     restart: unless-stopped
+
