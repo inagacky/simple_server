@@ -3,7 +3,6 @@
 const express = require('express');
 const app = express();
 
-// Constants
 const PORT = 3000;
 const LOG_FILE_PATH = '/var/log/app.log';
 
@@ -13,7 +12,8 @@ const format = winston.format;
 const logger = winston.createLogger({
     format: format.combine(
         format.timestamp(),
-        format.json()
+        format.cli(),
+        format.printf(info => `[${info.timestamp}] ${info.level} ${info.message}`)
     ),
     transports: [
         new winston.transports.Console(),
