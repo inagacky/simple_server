@@ -26,17 +26,17 @@ app.get('/', (req, res) => {
 });
 
 app.get('/info', (req, res) => {
-    logger.info('infoログ');
+    logger.info('info logging');
     res.send('info logging');
 });
 
 app.get('/warn', (req, res) => {
-    logger.warn('warnログ');
+    logger.warn('warn logging');
     res.send('warn logging');
 });
 
 app.get('/error', (req, res) => {
-    logger.error('errorログ');
+    logger.error('error logging');
     res.send('error logging');
 });
 
