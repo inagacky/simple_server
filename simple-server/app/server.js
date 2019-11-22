@@ -10,11 +10,6 @@ const winston = require('winston');
 const format = winston.format;
 
 const logger = winston.createLogger({
-    format: format.combine(
-        format.timestamp(),
-        format.cli(),
-        format.printf(info => `[${info.timestamp}] ${info.level} ${info.message}`)
-    ),
     transports: [
         new winston.transports.Console(),
         new winston.transports.File({ filename: LOG_FILE_PATH })
